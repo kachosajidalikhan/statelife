@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Logo from "../assets/images/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +9,7 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
+  const nav = useNavigate()
   return (
     <div className='w-full shadow-md'>
       <div className="w-[90%] lg:w-[85%] mx-auto p-6 flex justify-between items-center">
@@ -30,7 +32,7 @@ function Header() {
 
         {/* Buttons */}
         <div className="hidden md:flex space-x-4">
-          <button className='border px-4 py-2 rounded hover:bg-gray-100'>Sign in</button>
+          <button onClick={()=>{ nav("/loginsignup")}} className='border px-4 py-2 rounded hover:bg-gray-100'>Sign in</button>
           <button className='border px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600'>Sign up</button>
         </div>
 
