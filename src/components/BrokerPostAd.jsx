@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const BrokerPostAd = () => {
     const [agreed, setAgreed] = useState(false);
+    const nav = useNavigate();
 
     return (
         <>
@@ -130,6 +132,7 @@ const BrokerPostAd = () => {
                 </div>
                 <div className="flex justify-end px-6 pb-6">
                     <button
+                    onClick={()=>{ nav("/adspage")}}
                         className={`flex items-center justify-center py-2 px-4 text-white font-semibold rounded-lg ${agreed
                             ? "bg-blue-600 hover:bg-blue-700"
                             : "bg-gray-400 cursor-not-allowed"

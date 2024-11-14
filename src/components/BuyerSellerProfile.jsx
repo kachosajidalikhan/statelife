@@ -1,9 +1,11 @@
 import { Plus } from 'lucide-react';
 import ProfileSidebar from "./ProfileSidebar"
 import ProfilepageIMG from  "../assets/images/profilepageIMG.png"
+import { useNavigate } from "react-router-dom";
 
 
-export default function BuyerSellerProfile({ userType = 'buyer' }) {
+export default function BuyerSellerProfile({ userType = 'seller' }) {
+  const nav = useNavigate();
   return (<>
   <div className='flex w-full h-full'>
 
@@ -30,7 +32,7 @@ export default function BuyerSellerProfile({ userType = 'buyer' }) {
 
         {/* Post Ad Button - Only shown for sellers */}
         {userType === 'seller' && (
-          <button className="fixed bottom-6 right-6 bg-blue-600 text-white rounded-md px-4 py-2 flex items-center gap-2 hover:bg-blue-700 transition-colors">
+          <button onClick={()=>{ nav("/brokerpostad")}} className="fixed bottom-6 right-6 bg-blue-600 text-white rounded-md px-4 py-2 flex items-center gap-2 hover:bg-blue-700 transition-colors">
             <Plus className="w-5 h-5" />
             Post Ad
           </button>

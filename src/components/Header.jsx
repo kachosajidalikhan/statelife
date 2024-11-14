@@ -21,7 +21,7 @@ function Header() {
         {/* Menu for Large Screens */}
         <div className="hidden md:flex w-[50%] justify-between">
           <ul className="flex space-x-6">
-            <li className="hover:text-blue-500 cursor-pointer">Home</li>
+            <li onClick={()=>{nav("/")}} className="hover:text-blue-500 cursor-pointer">Home</li>
             <li className="hover:text-blue-500 cursor-pointer">Property</li>
             <li className="hover:text-blue-500 cursor-pointer">About</li>
             <li className="hover:text-blue-500 cursor-pointer">Review</li>
@@ -33,7 +33,7 @@ function Header() {
         {/* Buttons */}
         <div className="hidden md:flex space-x-4">
           <button onClick={()=>{ nav("/loginsignup")}} className='border px-4 py-2 rounded hover:bg-gray-100'>Sign in</button>
-          <button className='border px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600'>Sign up</button>
+          <button onClick={()=>{ nav("/individualprofile")}} className='border px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600'>Sign up</button>
         </div>
 
         {/* Hamburger Menu Icon */}
