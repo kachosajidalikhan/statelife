@@ -8,8 +8,10 @@ export default function BuyerSellerProfile({ userType = 'seller' }) {
   const nav = useNavigate();
   return (<>
   <div className='flex w-full h-full'>
+<div className='hidden md:block'>
 
       <ProfileSidebar/>
+</div>
   
     <div className="min-h-screen bg-gray-50 w-full flex flex-col items-center justify-center p-4">
       <div className="text-center max-w-md">

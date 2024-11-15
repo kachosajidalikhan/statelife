@@ -86,7 +86,10 @@ export default function RealEstateListings({ userType = 'seller' }) {
   return (
     <>
     <div className=" flex">
+      <div className='hidden md:block'>
+
     <ProfileSidebar/>
+      </div>
     <div className="container mx-auto p-5">
       <div className="grid md:grid-cols-3 gap-2 ">
         <PropertyCard
