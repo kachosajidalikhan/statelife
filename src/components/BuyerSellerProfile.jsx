@@ -11,16 +11,17 @@ export default function BuyerSellerProfile({ userType = 'seller' }) {
 <div className='hidden md:block'>
 
       <ProfileSidebar/>
+      
 </div>
   
-    <div className="min-h-screen bg-gray-50 w-full flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center p-4">
       <div className="text-center max-w-md">
         <p>If userType is seller then the Post Ad button will show on bottom as shown in figure</p>
-        <h1 className="text-2xl font-semibold text-gray-700 mb-8">
+        <h1 className="text-4xl font-extrabold text-[#4B5A6F] mb-8">
           No Activity Is Here
         </h1>
 
-        <div className="relative mb-8">
+        <div className="w-full relative mb-8">
           
           {/* Person illustration */}
           <div className="max-w-[25rem] mx-auto">
@@ -34,7 +35,7 @@ export default function BuyerSellerProfile({ userType = 'seller' }) {
 
         {/* Post Ad Button - Only shown for sellers */}
         {userType === 'seller' && (
-          <button onClick={()=>{ nav("/brokerpostad")}} className="fixed bottom-6 right-6 bg-blue-600 text-white rounded-md px-4 py-2 flex items-center gap-2 hover:bg-blue-700 transition-colors">
+          <button onClick={()=>{ nav("/brokerpostad")}} className="fixed bottom-6 right-6 bg-[#1252AE] text-white rounded-md px-4 py-2 flex items-center gap-2 hover:bg-blue-700 transition-colors">
             <Plus className="w-5 h-5" />
             Post Ad
           </button>

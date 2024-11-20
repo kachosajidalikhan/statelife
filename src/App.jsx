@@ -16,7 +16,7 @@ import LoadMore from "./Pages/LoadMore";
 import Login from "./Pages/Login";
 import ChatWindow from "./components/ChatWindow";
 import DashboardLoad from "./components/DashboardLoad";
-import LoginSignup from "./components/login_signup";
+import LoginSignup from "./components/signup";
 import BuyerSellerProfile from "./components/BuyerSellerProfile"
 import IndividualProfile from "./components/IndividualProfile"
 import BrokerSignup from "./components/BrokerSignup";
@@ -37,9 +37,8 @@ export default function App() {
    <Route path='/brokersignup' element={<BrokerSignup />} />
    <Route path='/individualprofile' element={<IndividualProfile />} />
    <Route path='/buyersellerprofile' element={<BuyerSellerProfile />} />
-   <Route path='/loginsignup' element={<LoginSignup />} />
+   <Route path='/signup' element={<LoginSignup />} />
    </Routes>
-   <Footer />
    </BrowserRouter>
 {/* <Home /> */}
 {/* <ChatWindow/> */}

@@ -2,22 +2,28 @@ import React, { useState } from 'react';
 import LoginSignup1 from '../assets/images/login-signup1.png';
 import LoginSignup2 from '../assets/images/login-signup2.png';
 import Logo from "../assets/images/Logo.png";
-import DashFooter from '../components/DashFooter';
+import DashFooter from './DashFooter';
+import { useNavigate } from 'react-router-dom';
 
 
 
-const LoginSignup = () => {
+const LoginSignup = ({ handleCloseModal }) => {
   const [selectedOption, setSelectedOption] = useState('');
+  const nav = useNavigate();
+  const handlenext = () => {
+    handleCloseModal();
+    nav('/individualprofile')
+  }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 relative">
+    <div className="p-10 bg-[#F4F6F8] flex flex-col">
+      <div className="p-8 flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 relative">
         {/* Left decoration */}
         <div className="hidden lg:block md:block relative right-[20px] top-[6rem]">
           <img
             src={LoginSignup1}
             alt="LoginSignup"
-            className="opacity-50 w-60"
+            className="w-60"
           />
         </div>
 
@@ -31,7 +37,7 @@ const LoginSignup = () => {
 
 
           <div className="text-center mb-6">
-            <p className="text-gray-600">Already Have An Account? Log In</p>
+            <p style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 700 }} className="text-gray-600 ">Already Have An Account? Log In</p>
           </div>
 
           <div className="space-y-4 mb-8">
@@ -44,7 +50,7 @@ const LoginSignup = () => {
                 onChange={(e) => setSelectedOption(e.target.value)}
                 className="mr-3"
               />
-              <span className="text-gray-700">Broker</span>
+              <span className="text-gray-700 w-full text-center">Broker</span>
             </label>
 
             <label className="flex items-center p-3 border rounded-full cursor-pointer hover:bg-gray-50">
@@ -56,13 +62,13 @@ const LoginSignup = () => {
                 onChange={(e) => setSelectedOption(e.target.value)}
                 className="mr-3"
               />
-              <span className="text-gray-700">Individual</span>
+              <span className="text-gray-700 w-full text-center">Individual</span>
             </label>
           </div>
 
           <button
-            className="w-full bg-blue-600 text-white rounded-full py-3 hover:bg-blue-700 transition-colors"
-            onClick={() => console.log('Next clicked')}
+            className="w-full bg-[#1252AE] text-white rounded-full py-3 hover:bg-blue-700 transition-colors"
+            onClick={handlenext}
           >
             Next
           </button>
@@ -73,11 +79,11 @@ const LoginSignup = () => {
           <img
             src={LoginSignup2}
             alt="LoginSignup"
-            className="opacity-50 w-60"
+            className=" w-60"
           />
         </div>
       </div>
-      <DashFooter/>
+      <DashFooter />
     </div>
   );
 };

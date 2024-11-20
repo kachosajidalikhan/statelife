@@ -24,6 +24,7 @@ function Home() {
       <Testimonials />
       <PropertyCarousel />
       <Subscribe />
+      <Footer/>
     </div>
   )
 }

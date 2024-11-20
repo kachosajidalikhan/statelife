@@ -2,9 +2,9 @@ import React from 'react';
 
 const Login = () => {
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex bg-gray-100">
       {/* Left Side - Image & Text */}
-      <div className="w-1/2 bg-blue-600 flex flex-col items-center justify-center text-center p-8">
+      <div className="md:w-1/2 md:block hidden bg-blue-600 flex flex-col items-center justify-center text-center p-8">
         <div className="max-w-sm">
           <img 
             src="https://via.placeholder.com/300x400" // Replace with the actual image URL
@@ -18,7 +18,7 @@ const Login = () => {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="w-1/2 bg-white flex flex-col items-center justify-center">
+      <div className=" w-full bg-white flex flex-col items-center justify-center">
         <div className="max-w-sm w-full p-8">
           <div className="flex flex-col items-center mb-8">
             <div className="bg-blue-100 p-4 rounded-full mb-4">

@@ -1,8 +1,10 @@
-import { HelpCircle, LogOut, MessageCircle, User, ShoppingBag, BookmarkIcon, Megaphone } from "lucide-react";
+import {HelpCircle, LogOut, MessageCircle, User, ShoppingBag, BookmarkIcon } from "lucide-react";
 import Profileimage from "../assets/images/profileimage.jpg"
-export default function ProfileSidebar({ userType = 'buyer' }) {
+import React, { useState } from 'react';
+export default function ProfileSidebar({ userType = 'buyer',}) {
+
   return (
-    <div className="w-80 bg-[#B6CAE6] min-h-screen flex flex-col rounded-r-xl">
+    <div className="w-60 bg-[#B6CAE6] min-h-screen flex flex-col rounded-r-xl">
       {/* Profile Section */}
       <div className="p-4 flex items-center gap-3">
         <div className=" w-[4rem] h-[4rem] relative overflow-hidden rounded-full">
@@ -23,7 +25,7 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
           <li>
             <a
               href="#"
-              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-white"
             >
               <User className="h-4 w-4" />
               Profile
@@ -32,7 +34,7 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
           <li>
             <a
               href="#"
-              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-white"
             >
               <MessageCircle className="h-4 w-4" />
               Chats
@@ -41,7 +43,7 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
           <li>
             <a
               href="#"
-              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-white"
             >
               <HelpCircle className="h-4 w-4" />
               FAQ's
@@ -54,7 +56,7 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
             <li>
           <a
             href="#"
-            className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+            className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-white"
             >
             <ShoppingBag className="h-4 w-4" />
             Previous Sell
@@ -63,7 +65,7 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
         <li>
         <a
           href="#"
-          className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+          className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-white"
           >
           <ShoppingBag className="h-4 w-4" />
           Ad
@@ -72,7 +74,7 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
       <li>
         <a
           href="#"
-          className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+          className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-white"
           >
           <ShoppingBag className="h-4 w-4" />
           Plans
@@ -84,7 +86,7 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
            <li>
             <a
               href="#"
-              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-white"
             >
               <ShoppingBag className="h-4 w-4" />
               Previous Buy
@@ -93,7 +95,7 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
           <li>
             <a
               href="#"
-              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-white"
             >
               <BookmarkIcon className="h-4 w-4" />
               Saved
@@ -108,7 +110,7 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
           <li>
             <a
               href="#"
-              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+              className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-white"
             >
               <LogOut className="h-4 w-4" />
               Log Out
@@ -118,13 +120,17 @@ export default function ProfileSidebar({ userType = 'buyer' }) {
       </nav>
 
       {/* Support Section */}
-      <div className="p-4">
+      <div className="p-4 w-full">
         <a
           href="#"
-          className="flex items-center gap-2 text-blue-600 hover:text-blue-700"
+          className="flex justify-center items-center gap-2 text-blue-600 hover:text-blue-700"
         >
-          <HelpCircle className="h-4 w-4" />
-          <span className="text-lg font-black">Support</span>
+          <div className="bg-white rounded-full p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headset"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
+          <path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
+          </svg>
+          </div>
+          <span className="text-2xl font-black">Support</span>
         </a>
       </div>
     </div>

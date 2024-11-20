@@ -20,9 +20,10 @@ const BrokerPostAd = () => {
                                 First Name
                             </label>
                             <input
+                                style={{boxShadow:"0px 0px 25px 4px #00000040"}}
                                 id="firstName1"
                                 placeholder="First Name"
-                                className=" bg-white w-full border rounded-lg px-4 py-2"
+                                className="bg-white w-full border rounded-lg px-4 py-2"
                             />
                         </div>
                         <div className="space-y-2">
@@ -30,6 +31,7 @@ const BrokerPostAd = () => {
                                 First Name
                             </label>
                             <input
+                            style={{boxShadow:"0px 0px 25px 4px #00000040"}}
                                 id="firstName2"
                                 placeholder="First Name"
                                 className="bg-white w-full border rounded-lg px-4 py-2"
@@ -42,6 +44,7 @@ const BrokerPostAd = () => {
                                 Cell No.
                             </label>
                             <input
+                            style={{boxShadow:"0px 0px 25px 4px #00000040"}}
                                 id="cellNo"
                                 placeholder="Cell No."
                                 className="bg-white w-full border rounded-lg px-4 py-2"
@@ -52,6 +55,7 @@ const BrokerPostAd = () => {
                                 Email
                             </label>
                             <input
+                            style={{boxShadow:"0px 0px 25px 4px #00000040"}}
                                 id="email"
                                 type="email"
                                 placeholder="Email"
@@ -64,6 +68,7 @@ const BrokerPostAd = () => {
                             Destination
                         </label>
                         <input
+                        style={{boxShadow:"0px 0px 25px 4px #00000040"}}
                             id="destination"
                             placeholder="Destination"
                             className="bg-white w-full border rounded-lg px-4 py-2"
@@ -74,6 +79,7 @@ const BrokerPostAd = () => {
                             Dimension
                         </label>
                         <input
+                        style={{boxShadow:"0px 0px 25px 4px #00000040"}}
                             id="dimension"
                             placeholder="Dimension"
                             className="bg-white w-full border rounded-lg px-4 py-2"
@@ -84,6 +90,7 @@ const BrokerPostAd = () => {
                             Description
                         </label>
                         <textarea
+                        style={{boxShadow:"0px 0px 25px 4px #00000040"}}
                             id="description"
                             placeholder="Description"
                             rows={4}
@@ -105,7 +112,7 @@ const BrokerPostAd = () => {
                             onChange={(e) => console.log(e.target.files[0])} // Handle file selection
                         />
                         <button
-                            className="text-sm bg-blue-600 text-white hover:bg-blue-700 rounded-lg py-2 px-4"
+                            className="text-sm bg-[#1252AE] text-white hover:bg-blue-700 rounded-lg py-2 px-4"
                         >
                             Browse From Your Device
                         </button>
@@ -121,7 +128,7 @@ const BrokerPostAd = () => {
                         />
                         <label
                             htmlFor="terms"
-                            className="text-sm font-medium leading-none"
+                            className="text-[#737D8C] text-sm font-medium leading-none"
                         >
                             I have read and I agree to the Sukoon Reality {" "}
                             <a href="#" className="text-blue-600 hover:underline">
@@ -134,7 +141,7 @@ const BrokerPostAd = () => {
                     <button
                     onClick={()=>{ nav("/adspage")}}
                         className={`flex items-center justify-center py-2 px-4 text-white font-semibold rounded-lg ${agreed
-                            ? "bg-blue-600 hover:bg-blue-700"
+                            ? "bg-[#1252AE] hover:bg-blue-700"
                             : "bg-gray-400 cursor-not-allowed"
                             }`}
                         disabled={!agreed}
