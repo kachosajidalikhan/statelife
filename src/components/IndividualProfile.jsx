@@ -43,6 +43,7 @@ export default function IndividualProfile() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
+            style={{boxShadow:"0px 0px 25px 4px #00000040"}}
               type="text"
               name="firstName"
               placeholder="First Name"
@@ -51,6 +52,7 @@ export default function IndividualProfile() {
               className="w-full p-3 rounded-md border border-gray-200 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
             <input
+            style={{boxShadow:"0px 0px 25px 4px #00000040"}}
               type="text"
               name="lastName"
               placeholder="Last Name"
@@ -62,6 +64,7 @@ export default function IndividualProfile() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
+            style={{boxShadow:"0px 0px 25px 4px #00000040"}}
               type="tel"
               name="cellNo"
               placeholder="Cell No."
@@ -70,6 +73,7 @@ export default function IndividualProfile() {
               className="w-full p-3 rounded-md border border-gray-200 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
             <input
+            style={{boxShadow:"0px 0px 25px 4px #00000040"}}
               type="email"
               name="email"
               placeholder="Email"
@@ -81,6 +85,7 @@ export default function IndividualProfile() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
+            style={{boxShadow:"0px 0px 25px 4px #00000040"}}
               type="password"
               name="password"
               placeholder="Password"
@@ -89,6 +94,7 @@ export default function IndividualProfile() {
               className="w-full p-3 rounded-md border border-gray-200 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
             <input
+            style={{boxShadow:"0px 0px 25px 4px #00000040"}}
               type="password"
               name="confirmPassword"
               placeholder="Confirm Password"
@@ -99,6 +105,7 @@ export default function IndividualProfile() {
           </div>
 
           <input
+          style={{boxShadow:"0px 0px 25px 4px #00000040"}}
             type="text"
             name="address"
             placeholder="Address"
@@ -108,6 +115,7 @@ export default function IndividualProfile() {
           />
 
           <select
+          style={{boxShadow:"0px 0px 25px 4px #00000040"}}
             name="broker"
             value={formData.broker}
             onChange={handleChange}
